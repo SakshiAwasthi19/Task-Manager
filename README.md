@@ -40,7 +40,7 @@ npm install
 ```
 #### Frontend
 ```bash
-cd ../client
+cd ../client1
 npm install
 ```
 
@@ -56,7 +56,7 @@ node ../server.js
 
 #### Start Frontend
 ```bash
-cd ../client
+cd ../client1
 npm start
 ```
 
@@ -72,7 +72,7 @@ Visit [http://localhost:3002](http://localhost:3002) to use the Task Manager.
 ## 📁 Project Structure
 ```
 fsui-assignment/
-├── client/         # React frontend
+├── client1/         # React frontend
 ├── server.js       # Express backend
 └── ...
 ```
