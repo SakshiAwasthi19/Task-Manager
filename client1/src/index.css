@@ -1,0 +1,198 @@
+/* Custom styles */
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #f5f6fa;
+  --success-color: #2ecc71;
+  --warning-color: #f1c40f;
+  --danger-color: #e74c3c;
+  --text-color: #2c3e50;
+}
+
+body {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+/* Card styling */
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 140px; /* Reduced from 180px */
+}
+
+.card-body .d-flex {
+  margin-top: auto;
+}
+
+.card-title {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Form styling */
+.form-control, .form-select {
+  border-radius: 8px;
+  border: 1px solid #e1e1e1;
+  padding: 0.75rem;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+.form-label {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* Button styling */
+.btn {
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #357abd;
+  border-color: #357abd;
+  transform: translateY(-1px);
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  border-color: var(--danger-color);
+}
+
+.btn-danger:hover {
+  background-color: #c0392b;
+  border-color: #c0392b;
+}
+
+/* Badge styling */
+.badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* Container spacing */
+.container {
+  padding: 2rem 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 1rem;
+  }
+  
+  .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .d-flex.gap-2 {
+    flex-direction: column;
+  }
+}
+
+/* Loading and error states */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.error-message {
+  background-color: #fde8e8;
+  color: var(--danger-color);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+/* Task status colors */
+.status-pending {
+  background-color: #95a5a6;
+}
+
+.status-in-progress {
+  background-color: var(--warning-color);
+}
+
+.status-completed {
+  background-color: var(--success-color);
+}
+
+/* jQuery UI specific styles */
+.ui-sortable-helper {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.ui-sortable-placeholder {
+  visibility: visible !important;
+  background: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  border-radius: 10px;
+}
+
+.task-actions {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.task-card:hover .task-actions {
+  opacity: 1;
+}
+
+/* Tooltip styling */
+.ui-tooltip {
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Make all cards the same height for perfect alignment */
+.card.h-100 {
+  min-height: 200px; /* Reduced from 260px */
+  display: flex;
+  flex-direction: column;
+}
